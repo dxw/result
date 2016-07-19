@@ -26,7 +26,7 @@ Handling `Result` values:
 
     $result = myfunc();
     if ($result->isErr()) {
-        echo $result->getErr();
+        echo sprintf("Error: %s\n", $result->getErr());
         exit(1);
     }
     $value = $result->unwrap();
@@ -40,5 +40,5 @@ Returning errors from other errors:
             // getErr() will return 'got invalid value: something went wrong'
             return $result->wrap('got invalid value');
         }
-        $value = $result->unwrap();
+        // do something with $result->unwrap()
     }
