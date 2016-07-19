@@ -2,6 +2,8 @@
 
 Meant to be a drop-in replacement for [nikita2206/result](https://github.com/nikita2206/result), with one addition: `wrap()`.
 
+`wrap()` was inspired by [github.com/pkg/errors](https://godoc.org/github.com/pkg/errors#Wrap).
+
 ## Installation
 
     composer require dxw/result
