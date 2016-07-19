@@ -41,4 +41,14 @@ describe(\Dxw\Result\Err::class, function () {
         //     })->to->throw(\TypeError::class);
         // });
     });
+
+    describe('->wrap()', function () {
+        it('should concatenate error strings', function () {
+            $result = new \Dxw\Result\Err('abc');
+            $newResult = $result->wrap('def');
+
+            expect($newResult)->to->be->instanceof(\Dxw\Result\Err::class);
+            expect($newResult->getErr())->to->equal('def: abc');
+        });
+    });
 });

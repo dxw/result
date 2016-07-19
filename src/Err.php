@@ -23,4 +23,9 @@ class Err extends Result
     {
         return true;
     }
+
+    public function wrap(string $message): \Dxw\Result\Result
+    {
+        return new self(sprintf('%s: %s', $message, $this->getErr()));
+    }
 }
