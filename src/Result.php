@@ -2,9 +2,9 @@
 
 namespace Dxw\Result;
 
-interface Result
+abstract class Result
 {
-    public function unwrap();
-    public function isErr(): bool;
-    public function getErr(): string;
+    abstract public function unwrap();
+    abstract public function isErr(): bool;
+    abstract public function getErr(): string;
 }

@@ -2,7 +2,7 @@
 
 namespace Dxw\Result;
 
-class Err implements Result
+class Err extends Result
 {
     public function __construct(string $message)
     {

@@ -2,7 +2,7 @@
 
 namespace Dxw\Result;
 
-class Ok implements Result
+class Ok extends Result
 {
     public function __construct($value)
     {
