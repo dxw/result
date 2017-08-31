@@ -4,6 +4,7 @@ namespace Dxw\Result;
 
 abstract class Result
 {
+    /** @return mixed */
     abstract public function unwrap();
     abstract public function isErr(): bool;
     abstract public function getErr(): string;

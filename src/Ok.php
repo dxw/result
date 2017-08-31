@@ -4,6 +4,9 @@ namespace Dxw\Result;
 
 class Ok extends Result
 {
+    /** @var mixed */
+    private $value;
+
     public function __construct($value)
     {
         $this->value = $value;
