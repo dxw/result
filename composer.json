@@ -17,8 +17,10 @@
         }
     },
     "require-dev": {
-        "fabpot/php-cs-fixer": "1.11.4",
         "peridot-php/peridot": "^1.18",
-        "peridot-php/leo": "^1.5"
+        "peridot-php/leo": "^1.5",
+        "vimeo/psalm": "^0.3.54",
+        "friendsofphp/php-cs-fixer": "^2.5",
+        "peridot-php/peridot-dot-reporter": "^1.0"
     }
 }
