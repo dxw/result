@@ -19,7 +19,7 @@
     "require-dev": {
         "peridot-php/peridot": "^1.18",
         "peridot-php/leo": "^1.5",
-        "vimeo/psalm": "^0.3.54",
+        "vimeo/psalm": "^3.2",
         "friendsofphp/php-cs-fixer": "^2.5",
         "peridot-php/peridot-dot-reporter": "^1.0"
     }
