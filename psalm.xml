@@ -1,11 +1,19 @@
 <?xml version="1.0"?>
+<!-- <psalm -->
+<!--     name="Example Psalm config with recommended defaults" -->
+<!--     stopOnFirstError="false" -->
+<!--     useDocblockTypes="true" -->
+<!--     totallyTyped="false" -->
+<!-- > -->
+<!--     <projectFiles> -->
+<!--         <directory name="src" /> -->
+<!--     </projectFiles> -->
+<!-- </psalm> -->
+
 <psalm
-    name="Example Psalm config with recommended defaults"
-    stopOnFirstError="false"
-    useDocblockTypes="true"
-    totallyTyped="false"
->
-    <projectFiles>
-        <directory name="src" />
-    </projectFiles>
+  useDocblockTypes="true"
+  totallyTyped="false">
+  <projectFiles>
+    <directory name="src"/>
+  </projectFiles>
 </psalm>

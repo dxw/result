@@ -2,16 +2,20 @@
 
 namespace Dxw\Result;
 
+/** @template T */
+
 class Ok extends Result
 {
-    /** @var mixed */
+    /** @var T */
     private $value;
 
+    /** @param T $value */
     public function __construct($value)
     {
         $this->value = $value;
     }
 
+    /** @return T */
     public function unwrap()
     {
         return $this->value;
