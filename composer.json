@@ -11,6 +11,11 @@
         "homepage": "https://www.dxw.com/"
       }
     ],
+    "config": {
+        "platform": {
+            "php": "7.0.22"
+        }
+    },
     "autoload": {
         "psr-4": {
             "Dxw\\Result\\": "src/"
