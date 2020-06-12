@@ -2,17 +2,21 @@
 
 namespace Dxw\Result;
 
-/** @template T */
-
+/** @template T1 */
 abstract class Result
 {
-    /** @return T */
+    /** @return T1 */
     abstract public function unwrap();
+
     abstract public function isErr(): bool;
     abstract public function getErr(): string;
     abstract public function wrap(string $message): \Dxw\Result\Result;
 
-    /** @param T $value */
+    /**
+    @template T2
+    @param T2 $value
+    @return self<T2>
+    */
     public static function ok($value): \Dxw\Result\Result
     {
         return new \Dxw\Result\Ok($value);
