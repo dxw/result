@@ -5,7 +5,4 @@ $config = \PhpCsFixer\Config::create()
     ->exclude('vendor')
     ->in(__DIR__)
 );
-\PhpCsFixer\FixerFactory::create()
-->registerBuiltInFixers()
-->useRuleSet(new \PhpCsFixer\RuleSet($config->getRules()));
 return $config;
