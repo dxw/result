@@ -9,6 +9,14 @@ describe(\Dxw\Result\Ok::class, function () {
         });
     });
 
+    describe('->unwarpOr()', function () {
+        it('should allow extracting values', function () {
+            $result = new \Dxw\Result\Ok('cat');
+
+            expect($result->unwrapOr('default'))->to->equal('cat');
+        });
+    });
+
     describe('->isErr()', function () {
         it('should always be false', function () {
             $result = new \Dxw\Result\Ok('cat');

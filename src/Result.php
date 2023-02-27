@@ -8,6 +8,12 @@ abstract class Result
     /** @return T1 */
     abstract public function unwrap();
 
+    /**
+    @param T1 $default
+    @return T1
+    */
+    abstract public function unwrapOr($default);
+
     abstract public function isErr(): bool;
     abstract public function getErr(): string;
     abstract public function wrap(string $message): \Dxw\Result\Result;

@@ -21,6 +21,11 @@ class Ok extends Result
         return $this->value;
     }
 
+    public function unwrapOr($default)
+    {
+        return $this->unwrap();
+    }
+
     public function isErr(): bool
     {
         return false;

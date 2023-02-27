@@ -17,6 +17,11 @@ class Err extends Result
         throw new \RuntimeException("Can't unwrap error");
     }
 
+    public function unwrapOr($default)
+    {
+        return $default;
+    }
+
     public function getErr(): string
     {
         return $this->message;
