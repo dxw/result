@@ -11,6 +11,14 @@ describe(\Dxw\Result\Err::class, function () {
         });
     });
 
+    describe('->unwrapOr()', function () {
+        it('should return the value given', function () {
+            $result = new \Dxw\Result\Err('foo');
+
+            expect($result->unwrapOr('default'))->to->equal('default');
+        });
+    });
+
     describe('->getErr()', function () {
         it('should report the error given', function () {
             $result = new \Dxw\Result\Err('meow');
