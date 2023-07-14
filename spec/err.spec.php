@@ -7,7 +7,7 @@ describe(\Dxw\Result\Err::class, function () {
 
             expect(function () use ($result) {
                 $result->unwrap();
-            })->to->throw(\RuntimeException::class);
+            })->toThrow(new \RuntimeException());
         });
     });
 
@@ -15,7 +15,7 @@ describe(\Dxw\Result\Err::class, function () {
         it('should return the value given', function () {
             $result = new \Dxw\Result\Err('foo');
 
-            expect($result->unwrapOr('default'))->to->equal('default');
+            expect($result->unwrapOr('default'))->toEqual('default');
         });
     });
 
@@ -23,7 +23,7 @@ describe(\Dxw\Result\Err::class, function () {
         it('should report the error given', function () {
             $result = new \Dxw\Result\Err('meow');
 
-            expect($result->getErr())->to->equal('meow');
+            expect($result->getErr())->toEqual('meow');
         });
     });
 
@@ -31,7 +31,7 @@ describe(\Dxw\Result\Err::class, function () {
         it('should always return true', function () {
             $result = new \Dxw\Result\Err('bar');
 
-            expect($result->isErr())->to->equal(true);
+            expect($result->isErr())->toEqual(true);
         });
     });
 
@@ -39,7 +39,7 @@ describe(\Dxw\Result\Err::class, function () {
         it('should coerce ints into strings', function () {
             $result = new \Dxw\Result\Err(123);
 
-            expect($result->getErr())->to->equal('123');
+            expect($result->getErr())->toEqual('123');
         });
 
         //TODO: how do we do this?
@@ -55,8 +55,8 @@ describe(\Dxw\Result\Err::class, function () {
             $result = new \Dxw\Result\Err('abc');
             $newResult = $result->wrap('def');
 
-            expect($newResult)->to->be->instanceof(\Dxw\Result\Err::class);
-            expect($newResult->getErr())->to->equal('def: abc');
+            expect($newResult)->toBeAnInstanceOf(\Dxw\Result\Err::class);
+            expect($newResult->getErr())->toEqual('def: abc');
         });
     });
 });

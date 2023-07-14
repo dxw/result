@@ -5,7 +5,7 @@ describe(\Dxw\Result\Ok::class, function () {
         it('should allow extracting values', function () {
             $result = new \Dxw\Result\Ok('cat');
 
-            expect($result->unwrap())->to->equal('cat');
+            expect($result->unwrap())->toEqual('cat');
         });
     });
 
@@ -13,7 +13,7 @@ describe(\Dxw\Result\Ok::class, function () {
         it('should allow extracting values', function () {
             $result = new \Dxw\Result\Ok('cat');
 
-            expect($result->unwrapOr('default'))->to->equal('cat');
+            expect($result->unwrapOr('default'))->toEqual('cat');
         });
     });
 
@@ -21,7 +21,7 @@ describe(\Dxw\Result\Ok::class, function () {
         it('should always be false', function () {
             $result = new \Dxw\Result\Ok('cat');
 
-            expect($result->isErr())->to->equal(false);
+            expect($result->isErr())->toEqual(false);
         });
     });
 
@@ -31,7 +31,7 @@ describe(\Dxw\Result\Ok::class, function () {
 
             expect(function () use ($result) {
                 $result->getErr();
-            })->to->throw(\RuntimeException::class);
+            })->toThrow(new \RuntimeException());
         });
     });
 
@@ -41,7 +41,7 @@ describe(\Dxw\Result\Ok::class, function () {
 
             expect(function () use ($result) {
                 $result->wrap('foobar');
-            })->to->throw(\RuntimeException::class);
+            })->toThrow(new \RuntimeException());
         });
     });
 });
