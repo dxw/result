@@ -17,6 +17,10 @@ class Err extends Result
 		throw new \RuntimeException("Can't unwrap error");
 	}
 
+	/**
+	@param mixed $default
+	@psalm-return mixed
+	*/
 	public function unwrapOr($default)
 	{
 		return $default;
