@@ -1,8 +1,8 @@
 <?php
-$config = \PhpCsFixer\Config::create()
-->setFinder(
-    PhpCsFixer\Finder::create()
-    ->exclude('vendor')
-    ->in(__DIR__)
-);
-return $config;
+
+$finder = \PhpCsFixer\Finder::create()
+->exclude('vendor')
+->in(__DIR__);
+
+return \Dxw\PhpCsFixerConfig\Config::create()
+->setFinder($finder);

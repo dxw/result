@@ -18,8 +18,8 @@
     },
     "require-dev": {
         "vimeo/psalm": "^4",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "kahlan/kahlan": "^5.2"
+        "kahlan/kahlan": "^5.2",
+        "dxw/php-cs-fixer-config": "^2.1"
     },
     "require": {
         "php": "^7.2||^8.0"
