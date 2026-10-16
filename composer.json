@@ -11,17 +11,22 @@
         "homepage": "https://www.dxw.com/"
       }
     ],
+    "config": {
+        "platform": {
+            "php": "8.3.16"
+         }
+    },
     "autoload": {
         "psr-4": {
             "Dxw\\Result\\": "src/"
         }
     },
     "require-dev": {
-        "vimeo/psalm": "^4",
+        "vimeo/psalm": "^6",
         "kahlan/kahlan": "^5.2",
         "dxw/php-cs-fixer-config": "^2.1"
     },
     "require": {
-        "php": "^8.1"
+        "php": "^8.3"
     }
 }
