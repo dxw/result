@@ -2,7 +2,10 @@
 
 namespace Dxw\Result;
 
-/** @template T1 */
+/**
+ * @template T1
+ * @api
+ * */
 abstract class Result
 {
 	/** @return T1 */

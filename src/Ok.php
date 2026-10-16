@@ -2,7 +2,10 @@
 
 namespace Dxw\Result;
 
-/** @template T */
+/** @template T
+ * @extends Result<mixed>
+ * @api
+ */
 
 class Ok extends Result
 {

@@ -2,6 +2,10 @@
 
 namespace Dxw\Result;
 
+/**
+ * @extends Result<mixed>
+ * @api
+ */
 class Err extends Result
 {
 	/** @var string */
