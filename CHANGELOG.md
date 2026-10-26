@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.7] - 2026-10-26
+
+### Added
+
+- Support for PHP 8.3 to 8.5
+
+### Removed
+
+- Support for PHP 8.2 and below
+
 ## [1.0.6] - 2023-07-19
 ### Added
 - Support for PHP 8.1
